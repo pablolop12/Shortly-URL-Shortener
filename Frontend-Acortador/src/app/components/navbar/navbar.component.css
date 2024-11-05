@@ -7,20 +7,53 @@ nav{
     padding: 17px 0px;
 
     .logo{
+        font-size: 32px;
         color: rgb(255, 255, 255);
+        cursor: pointer;
     }
     p{
         margin: 0;
     }
 
 }
+.left{
+    transition: all 0.3s ease; /* Para transiciones suaves */
+}
 
-.primaryButton{
+.navLink{
+    text-decoration: none;
+    color: #ffffffb9;
+    cursor: pointer;
+    transition: all 0.2s ease; /* Para transiciones suaves */
+}
+
+.navLink:hover{
+    color: #ffffff;
+}
+
+.primaryButton {
+
     background-color: rgba(255, 255, 255, 0.045);
     border: 1px solid rgba(255, 255, 255, 0.119);
+    backdrop-filter: blur(4px);
     border-radius: 5px;
+    min-width: 105px;
     padding: 7px 14px;
-    height: 275px;
     text-decoration: none;
-    color: #ffffffb7;;
+    color: #ffffffb7;
+    cursor: pointer;
+    transition: all 0.2s ease; /* Para transiciones suaves */
+    
+}
+
+.primaryButton:hover {
+    border-color: rgba(255, 255, 255, 0.566);
+
+}
+
+/* Media query para ocultar elementos con la clase .left en pantallas de 460px o menos */
+@media (max-width: 524px) {
+    .left {
+        display: none !important;
+    }
 }

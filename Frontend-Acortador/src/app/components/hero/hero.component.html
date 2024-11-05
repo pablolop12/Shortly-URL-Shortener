@@ -1,10 +1,42 @@
 <div class="hero">
-    <h2>No pierdas tu tiempo</h2>
-    <h1>Acorta un enlace ahora</h1>
-    <p>Shortly es una plataforma que te permite acortar enlaces de manera ágil, nada de credenciales,
-        publicidad, limitaciones u otros pasos innecesarios que supongan una perdida de tiempo.</p>
-    <div class="d-flex">
-        <input class="introLink" placeholder="Introduce aquí una url" type="text">
-        <button class="ms-2 introButton">Acortar</button>
+    <div class="headHolder d-flex justify-content-center">
+        <div class="textHead">
+            <h2 class="m-0">No pierdas tu tiempo</h2>
+            <h1>Acorta un enlace ahora</h1>
+            <p class="paragraph">
+                Shortly es una plataforma que te permite acortar enlaces de manera ágil, nada de credenciales,
+                publicidad,
+                limitaciones u otros pasos innecesarios.
+            </p>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="input-container d-flex align-items-center" (click)="focusInput()" tabindex="0">
+            <i class="fa-regular fa-keyboard"></i>
+            <input #introLinkInput class="introLink" placeholder="Introduce la URL a acortar" type="text"
+                spellcheck="false" />
+
+        </div>
+        <button class="ms-2 primaryButton" (click)="shortenUrl(introLinkInput.value)">
+            <i class="bi bi-scissors me-1"></i>Acortar
+        </button>
+    </div>
+
+    <!-- Mensaje de error cuando la URL es inválida o duplicada -->
+    <div *ngIf="showDuplicateError" class="error-message">{{ errorMessage }}</div>
+</div>
+
+<!-- Mostrar los enlaces acortados en filas de tres (responsive) -->
+<div class="shortened-urls-container">
+    <div *ngFor="let link of shortenedUrlsList" class="linkResult">
+        <p class="mb-0">Tu enlace acortado:</p>
+        <a class="linkShow" [href]="'http://localhost:8080/api/' + link.shortenedUrl" target="_blank">{{ host }}/{{
+            link.shortenedUrl }}</a>
+        <span class="position-relative" (click)="copyToClipboard(link.shortenedUrl)">
+            <i #copyIcon class="fa-regular fa-copy ms-2" style="cursor: pointer;" data-bs-toggle="tooltip"
+                title="Copiado"></i>
+        </span>
+        <br>
+        <span class="originShow">{{ link.originalUrl }}</span>
     </div>
 </div>

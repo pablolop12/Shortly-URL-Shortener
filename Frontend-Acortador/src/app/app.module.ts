@@ -7,6 +7,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FillingComponent } from './components/filling/filling.component';
+import { HttpClientModule } from '@angular/common/http';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { FillingComponent } from './components/filling/filling.component';
     NavbarComponent,
     HeroComponent,
     FooterComponent,
-    FillingComponent
+    FillingComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
