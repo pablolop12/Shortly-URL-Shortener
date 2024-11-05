@@ -1,0 +1,40 @@
+.hero {
+    text-align: center;
+    margin-bottom: 30px;
+    
+
+    h1 {
+        font-size: 50px;
+        font-weight: 600;
+        color: white;
+    }
+    h2 {
+        font-size: 20px;
+        color: #ffffff9e;
+        font-weight: 400;
+    }
+
+    p {
+        font-size: 16px;
+        color: #ffffff7e;
+    }
+}
+
+.introLink {
+    background-color: rgba(255, 255, 255, 0.053);
+    border: none;
+    color: white;
+    width: 100%;
+    padding: 7px 14px;
+    border-radius: 10px;
+}
+
+.introButton {
+
+    background-color: rgba(255, 255, 255, 0.053);
+    border: none;
+    color: #ffffff7e;
+    padding: 7px 14px;
+    border-radius: 10px;
+
+}
