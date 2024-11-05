@@ -47,7 +47,7 @@
 
 @media (max-width: 654px) {
   .linkResult {
-    width: 100%;
+    width: 100% !important;
   }
 }
 
@@ -129,7 +129,8 @@
   width: 100%;
   background-color: transparent;
   border: none;
-  color: white;
+  color: rgb(235, 235, 235);
+  font-weight: 400;
   outline: none;
 }
 
