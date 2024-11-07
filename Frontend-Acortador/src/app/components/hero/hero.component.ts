@@ -31,37 +31,12 @@ export class HeroComponent implements AfterViewInit {
     }, 0);
   }
 
-  // Escucha el evento de teclado a nivel de ventana para detectar "Ctrl + V"
-  @HostListener('window:keydown', ['$event'])
-  async handlePasteShortcut(event: KeyboardEvent) {
-    if (event.ctrlKey && event.key === 'v') {
-      event.preventDefault();
-
-      // Pega el contenido del portapapeles en el input y ejecuta shortenUrl
-      const text = await navigator.clipboard.readText();
-      if (this.introLinkInput.nativeElement.value === '') {
-        this.introLinkInput.nativeElement.value = text;
-        this.shortenUrl(text); // Llama a shortenUrl directamente
-      }
-    }
-  }
+ 
 
   focusInput() {
     this.introLinkInput.nativeElement.focus();
   }
 
-  handleKeydown(event: KeyboardEvent) {
-    const inputElement = this.introLinkInput.nativeElement;
-    inputElement.focus();
-
-    if (event.key === 'Backspace') {
-      inputElement.value = inputElement.value.slice(0, -1);
-    } else if (event.key.length === 1) {
-      inputElement.value += event.key;
-    }
-
-    event.preventDefault();
-  }
 
   isValidUrl(url: string): boolean {
     const urlPattern = /^(https?:\/\/)?([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(\/\S*)?$/;
