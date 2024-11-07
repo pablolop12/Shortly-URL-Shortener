@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UrlShortenerService {
-  private apiUrl = 'https://13.60.214.218:8080/api';
+  private apiUrl = 'https://apishortly.pablolopezlujan.es/api';
 
   constructor(private http: HttpClient) {}
 
@@ -16,7 +16,7 @@ export class UrlShortenerService {
   }
 
   getOriginalUrl(shortenedUrl: string): Observable<string> {
-    return this.http.get<string>(`https://13.60.214.218:8080/api/${shortenedUrl}`);
+    return this.http.get<string>(`https://apishortly.pablolopezlujan.es/api/${shortenedUrl}`);
   }
   
 }
