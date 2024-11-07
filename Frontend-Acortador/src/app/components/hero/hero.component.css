@@ -74,7 +74,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 210px !important; /* Permite que ocupe el ancho que necesite */
+    width: 210px ; /* Permite que ocupe el ancho que necesite */
   }
 }
 
@@ -188,7 +188,7 @@ a {
 
 @media (max-width: 918px) {
   .linkResult {
-    width: 48% !important;
+    width: 48% ;
 
     
   }
@@ -196,7 +196,7 @@ a {
   
 @media (max-width: 654px) {
   .linkResult {
-    width: 100% !important;
+    width: 100% ;
   }
   .linkShow {
     width: auto !important;
