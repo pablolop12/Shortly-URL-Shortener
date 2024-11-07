@@ -43,11 +43,13 @@
   .linkResult {
     width: 48% !important;
 
-    .linkShow{
-      max-width: 230px;
-      text-overflow: ellipsis; /* Aplica puntos suspensivos al final */
+    
+  }
 
-    }
+  .linkShow{
+    max-width: 220px;
+    text-overflow: ellipsis; /* Aplica puntos suspensivos al final */
+
   }
 }
 
