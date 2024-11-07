@@ -14,7 +14,7 @@ public class WebConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
-                        .allowedOrigins("http://localhost:4200") // Cambia esto si tu frontend está en otra URL
+                        .allowedOrigins("https://shortly.pablolopezlujan.es/") //URL del host frontend
                         .allowedMethods("GET", "POST");
             }
         };

@@ -14,8 +14,8 @@ export class UrlRedirectGuard implements CanActivate {
     const shortenedUrl = route.paramMap.get('shortenedUrl');
     if (shortenedUrl) {
       // Redirige directamente al URL backend
-      window.location.href = `http://localhost:8080/api/${shortenedUrl}`; //Estaría bien sustituir la URL por una variable más accesible
-      return of(false);  // Cancela la navegación de Angular
+      window.location.href = `http://13.60.214.218:8080/api/${shortenedUrl}`; //URL BACKEND
+      return of(false); 
     }
 
     return of(false);
