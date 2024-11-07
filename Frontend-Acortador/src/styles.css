@@ -28,6 +28,16 @@
   opacity: 0.047; /* Ajusta la opacidad del patrón SVG para un efecto más suave */
 }
 
+html, body {
+  background-color:rgb(28, 28, 28) ;
+  
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  padding-top: env(safe-area-inset-top);
+}
 
 
 
