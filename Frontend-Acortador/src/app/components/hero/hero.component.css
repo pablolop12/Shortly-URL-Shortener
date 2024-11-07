@@ -47,7 +47,7 @@
   }
 
   .linkShow{
-    max-width: 220px;
+    max-width: 210px !important;
     text-overflow: ellipsis; /* Aplica puntos suspensivos al final */
 
   }
