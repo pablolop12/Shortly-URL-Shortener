@@ -47,8 +47,11 @@
   }
 
   .linkShow{
-    max-width: 210px !important;
-    text-overflow: ellipsis; /* Aplica puntos suspensivos al final */
+    display: inline-block; /* Esto permite que el ancho se respete */
+    width: 210px;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    overflow: hidden;
+    text-overflow: ellipsis; 
 
   }
 }
