@@ -74,6 +74,7 @@
   }
 
   .linkShow{
+    color: rgba(255, 255, 255, 0.895);
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
