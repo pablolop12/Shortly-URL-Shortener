@@ -4,7 +4,7 @@
       "src": "Frontend-Acortador/**",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist/frontend-acortador"
+        "distDir": "dist/frontend-acortador/browser"
       }
     }
   ],
