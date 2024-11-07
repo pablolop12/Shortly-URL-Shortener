@@ -1,8 +1,11 @@
 {
   "builds": [
     {
-      "src": "Frontend-Acortador/dist/frontend-acortador/**",
-      "use": "@vercel/static"
+      "src": "Frontend-Acortador/**",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist/frontend-acortador"
+      }
     }
   ],
   "routes": [
