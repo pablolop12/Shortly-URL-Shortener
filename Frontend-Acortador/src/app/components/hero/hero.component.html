@@ -31,12 +31,14 @@
     <div *ngFor="let link of shortenedUrlsList" class="linkResult">
         <p class="mb-0">Tu enlace acortado:</p>
         <!-- HARDCODEADO CAMBIAR EN DEPLOY -->
-        <a class="linkShow" [href]="'https://apishortly.pablolopezlujan.es/api/' + link.shortenedUrl" target="_blank">shortly.pablolopezlujan.es/{{
-            link.shortenedUrl }} <span class="position-relative" (click)="copyToClipboard(link.shortenedUrl)">
+        <div class="d-flex">
+            <a class="linkShow" [href]="'https://apishortly.pablolopezlujan.es/api/' + link.shortenedUrl" target="_blank">shortly.pablolopezlujan.es/{{
+                link.shortenedUrl }}</a>
+            <span class="position-relative" (click)="copyToClipboard(link.shortenedUrl)">
                 <i #copyIcon class="fa-regular fa-copy ms-2" style="cursor: pointer;" data-bs-toggle="tooltip"
                     title="Copiado"></i>
-            </span></a>
-        
+            </span>
+        </div>
         <br>
         <span class="originShow">{{ link.originalUrl }}</span>
     </div>
