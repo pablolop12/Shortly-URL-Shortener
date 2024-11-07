@@ -23,7 +23,7 @@
     </div>
 
     <!-- Mensaje de error cuando la URL es inválida o duplicada -->
-    <div *ngIf="showDuplicateError" class="error-message">{{ errorMessage }}</div>
+    <div *ngIf="showDuplicateError" class="error-message" style="padding: 0px 10px;"><i class="bi bi-exclamation-circle me-1"></i>{{ errorMessage }}</div>
 </div>
 
 <!-- Mostrar los enlaces acortados en filas de tres (responsive) -->
