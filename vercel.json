@@ -1,0 +1,11 @@
+{
+  "builds": [
+    {
+      "src": "Frontend-Acortador/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "Frontend-Acortador/dist/frontend-acortador/index.html" }
+  ]
+}
