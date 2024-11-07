@@ -39,22 +39,6 @@
 }
 
 
-@media (max-width: 918px) {
-  .linkResult {
-    width: 48% !important;
-
-    
-  }
-
-  .linkShow{
-    display: inline-block; /* Esto permite que el ancho se respete */
-    width: 210px;
-    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
-    overflow: hidden;
-    text-overflow: ellipsis; 
-
-  }
-}
 
 @media (max-width: 654px) {
   .linkResult {
@@ -90,7 +74,11 @@
   }
 
   .linkShow{
-    color: white;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: auto; /* Permite que ocupe el ancho que necesite */
   }
 }
 
@@ -199,6 +187,19 @@ a {
     margin-top: 5px;
   }
 
+}
+
+
+@media (max-width: 918px) {
+  .linkResult {
+    width: 48% !important;
+
+    
+  }
+
+  .linkShow {
+    width: 210px;
+}
 }
 
 /* Animación de vibración */
