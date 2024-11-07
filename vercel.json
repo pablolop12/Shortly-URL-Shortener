@@ -9,6 +9,6 @@
     }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "Frontend-Acortador/dist/frontend-acortador/index.html" }
+    { "src": "/(.*)", "dest": "Frontend-Acortador/dist/frontend-acortador/browser/index.html" }
   ]
 }
