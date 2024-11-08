@@ -36,8 +36,8 @@ Requisitos Previos
 
 
 ```bash
-git clone https://github.com/tu_usuario/tu_repositorio.git
-cd tu_repositorio
+git clone https://github.com/pablolop12/Shortly-URL-Shortener.git
+cd Shortly-URL-Shortener
 ```
 Configura el backend en Spring Boot:
 
