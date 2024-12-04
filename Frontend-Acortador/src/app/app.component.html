@@ -1,7 +1,18 @@
 <div class="site">
+  <div class="warning text-center">
+    <i class="fa-solid fa-gears me-2"></i><strong>¡Atención!</strong> Actualmente estoy haciendo una migración del backend y la base de datos, por lo que la aplicación estará <strong>fuera de servicio</strong> mientras dure el proceso.
+  </div>
   <app-navbar></app-navbar>
   <div class="base d-flex justify-content-center">
     <router-outlet></router-outlet>
   </div>
   <app-footer></app-footer>
 </div>
+
+<style>
+  .warning{
+    background-color: rgb(194, 50, 50);
+    color: white;
+    padding: 5px;
+  }
+</style>
