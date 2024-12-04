@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.view.RedirectView;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -20,12 +21,21 @@ import java.util.Map;
 import es.pablolopezlujan.acortador.acortador.model.Url;
 import es.pablolopezlujan.acortador.acortador.service.UrlService;
 
-@Controller
+@RestController
 @RequestMapping("/api")
 public class UrlController {
     
     @Autowired
     private UrlService urlService;
+
+    //Endpoint de testeo
+    @GetMapping("/")
+    public String welcome() {
+    System.out.println("El endpoint /api/ fue invocado");
+    return "El backend está funcionando correctamente";
+    }
+
+
 
  // Endpoint para acortar una URL
     @PostMapping("/shorten")

@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UrlShortenerService {
-  private apiUrl = 'https://apishortly.pablolopezlujan.es/api';
+  private apiUrl = 'https://shortly-railway-production.up.railway.app/api'; //URL BACKEND
 
   constructor(private http: HttpClient) {}
 
@@ -16,7 +16,7 @@ export class UrlShortenerService {
   }
 
   getOriginalUrl(shortenedUrl: string): Observable<string> {
-    return this.http.get<string>(`https://apishortly.pablolopezlujan.es/api/${shortenedUrl}`);
+    return this.http.get<string>(`https://shortly-railway-production.up.railway.app/api/${shortenedUrl}`); //URL BACKEND
   }
   
 }

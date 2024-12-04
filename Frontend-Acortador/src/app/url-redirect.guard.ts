@@ -14,7 +14,7 @@ export class UrlRedirectGuard implements CanActivate {
     const shortenedUrl = route.paramMap.get('shortenedUrl');
     if (shortenedUrl) {
       // Redirige directamente al URL backend
-      window.location.href = `https://apishortly.pablolopezlujan.es/api/${shortenedUrl}`; //URL BACKEND
+      window.location.href = `https://shortly-railway-production.up.railway.app/api/${shortenedUrl}`; //URL BACKEND
       return of(false); 
     }
 
